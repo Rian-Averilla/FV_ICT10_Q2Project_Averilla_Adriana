@@ -12,7 +12,7 @@
      <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 500px;
+            max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             background-color: #0b1011;
@@ -32,60 +32,60 @@
             border-radius: 50%;
         }
 
-        h1 {
-            color: #2a7c78;
+        .profile-layout {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            align-items: start;
+            gap: 30px;
+        }
+
+        .profile-photo {
             text-align: center;
         }
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-            color: #2a7c78;
+
+        @media (max-width: 600px) {
+            .profile-layout {
+                grid-template-columns: 1fr;
+            }
         }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #bdc3c7;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            margin-top: 20px;
-            background-color: #0c9292;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0c9292;
-        }
-        #result {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 16px;
-            min-height: 50px;
-        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Meet the Creator</h1>
 
-        <img src="https://lh3.googleusercontent.com/a/ACg8ocKNFNNk_WyIMsjz68NZtqCo_Og8TlTXSfep_4r21gnuRdI3E6GZ=s288-c-no" alt="me">
-        <label for="first_name">First Name:</label>
-        <input type="text" id="first_name" placeholder="Enter first name">
+<!-- Containter-->
+<div class="container">
 
-        <label for="last_name">Last Name:</label>
-        <input type="text" id="last_name" placeholder="Enter last name">
+    <!--Heading-->
+    <h1 style="color: #1b4e4c; text-align: center; font-weight: bold;">Meet the Creator</h1>
 
-        <button id="check-btn" py-click="check_membership()">Check</button>
+    <div class="profile-layout">
+        <div class="profile-photo">
+            <h6 style="color: #316d6a; font-weight: bold;">"Rian"</h6>
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocKNFNNk_WyIMsjz68NZtqCo_Og8TlTXSfep_4r21gnuRdI3E6GZ=s288-c-no" alt="me">
+            <br>
+            <h6 style="color: #316d6a;">"What would life be if we had no courage to attempt anything?"</h6> 
+            <p style="color: #316d6a;">- Van Gogh</p>
+        </div>
+
+        <!--Information-->
+        <div>
+            <h6 style="color: #316d6a; font-weight: bold;">Full name:</h6>
+            <p style="color: #2a7c78;">Adriana S. Averilla</p>
+
+            <h6 style="color: #316d6a; font-weight: bold;">Age:</h6>
+            <p style="color: #2a7c78;">15</p>
+
+            <h6 style="color: #316d6a; font-weight: bold;">Birthday:</h6>
+            <p style="color: #2a7c78;">January 31, 2011</p>
+
+            <h6 style="color: #316d6a; font-weight: bold;">Hobbies:</h6>
+            <p style="color: #2a7c78;">Watching youtube, playing volleyball, playing video games, and playing music instruments/listening to music</p>
+
+            <h6 style="color: #316d6a; font-weight: bold;">Dreams:</h6>
+            <p style="color: #2a7c78;">To become a successful musician(clarinetist) and play around the world or in musicals/orchestra</p>
+        </div>
+    </div>
 
         <div id="result"></div>
     </div>
