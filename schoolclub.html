@@ -9,6 +9,60 @@
     <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <title>ICT 10 Project</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #212529;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0f0331;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #060331;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #d5eeff;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #292383;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #292383;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            min-height: 50px;
+        }
+    </style>
 </head>
 <body class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom border-5">
@@ -28,8 +82,20 @@
         </div>
     </nav>
 
-    <main class="container bg-light rounded p-4 my-5">
-        <h1>School Club Members</h1>
-    </main>
+<div class="form-container" id="result">
+        
+        <h1>Add New Club Member:</h1>
+
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" placeholder="Enter first name">
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" placeholder="Enter last name">
+
+        <button id="add_member" py-click="add_member()">Add Member</button>
+    
+    </div>
+     
+    <script type="py" src="main.py"></script>
 </body>
 </html>

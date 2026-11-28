@@ -29,7 +29,22 @@
     </nav>
 
     <main class="container bg-light rounded p-4 my-5">
-        <h1>Club Member Checker</h1>
+        <h1 class="text-center">Club Member Checker</h1>
+
+        <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" placeholder="Enter first name">
+        </div>
+
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Enter last name">
+        </div>
+
+        <button class="btn btn-primary w-100" id="check_member" py-click="check_member()">Check Member</button>
+        <div id="result" class="mt-3 text-center"></div>
     </main>
+
+    <script type="py" src="main.py"></script>
 </body>
 </html>
